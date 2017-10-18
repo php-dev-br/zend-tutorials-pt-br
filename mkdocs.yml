@@ -3,7 +3,7 @@ site_dir: doc/html
 pages:
     - index.html
     - 'Tutoriais sobre MVC':
-      - 'Iniciando com o Zend Framework':
+      - 'Começando com o Zend Framework':
           - 'Visão Geral': getting-started/overview.md
           - 'A Aplicação Esqueleto': getting-started/skeleton-application.md
           - 'Módulos': getting-started/modules.md
