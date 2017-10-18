@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+docker run \
+    -it \
+    -p 80:80 \
+    -v ${PWD}/..:/workspace \
+    --name zend-tutorials-mkdocs \
+    --rm \
+    arcristo/zend-mkdocs "$@"
