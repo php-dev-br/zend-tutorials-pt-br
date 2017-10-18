@@ -1,6 +1,6 @@
-# Tutorials for Zend Framework
+# Tutoriais para o Zend Framework
 
-This repository contains tutorials for learning Zend Framework, particularly
-around building zend-mvc applications.
+Este repositório contém tutoriais para aprender o Zend Framework, particularmente
+em torno da construção de aplicações zend-mvc.
 
-Please see the [generated documentation](https://zendframework.github.io/tutorials/).
+Consulte a [documentação gerada](https://docs.zendframework.com.br/tutoriais/).
