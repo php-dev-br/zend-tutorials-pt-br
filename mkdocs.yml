@@ -2,40 +2,40 @@ docs_dir: doc/book
 site_dir: doc/html
 pages:
     - index.html
-    - "MVC Tutorials":
-      - "Getting Started with Zend Framework":
-          - Overview: getting-started/overview.md
-          - "The Skeleton Application": getting-started/skeleton-application.md
-          - Modules: getting-started/modules.md
-          - "Routing and Controllers": getting-started/routing-and-controllers.md
-          - "Database and Models": getting-started/database-and-models.md
-          - "Forms and Actions": getting-started/forms-and-actions.md
-          - Conclusion: getting-started/conclusion.md
-      - "Unit Testing A zend-mvc Application": unit-testing.md
-      - "Adding zend-navigation to the Album Module": navigation.md
-      - "Adding zend-paginator to the Album Module": pagination.md
-      - "In-Depth Tutorial":
-          - "Introducing the Blog Module": in-depth-guide/first-module.md
-          - "Models and the ServiceManager": in-depth-guide/models-and-servicemanager.md
-          - "Preparing for Different Databases": in-depth-guide/preparing-databases.md
-          - "SQL Abstraction and Object Hydration": in-depth-guide/zend-db-sql-zend-hydrator.md
-          - "Understanding the Router": in-depth-guide/understanding-routing.md
-          - "Making Use of Forms and Fieldsets": in-depth-guide/zend-form-zend-form-fieldset.md
-          - "Editing and Deleting Data": in-depth-guide/data-binding.md
-          - "Reviewing the Blog Module": in-depth-guide/review.md
-      - "Advanced Configuration": advanced-config.md
-      - Internationalization: i18n.md
-    - "Component Tutorials":
-      - "Setting Up A Database Adapter": db-adapter.md
-      - "Using the EventManager": event-manager.md
-    - Migration:
-        - "To Version 3":
-            - Overview: migration/to-v3/overview.md
-            - Components: migration/to-v3/components.md
-            - Applications: migration/to-v3/application.md
-site_name: tutorials
-site_description: "Zend Framework Tutorials"
-repo_url: 'https://github.com/zendframework/tutorials'
+    - 'Tutoriais sobre MVC':
+      - 'Iniciando com o Zend Framework':
+          - 'Visão Geral': getting-started/overview.md
+          - 'A Aplicação Esqueleto': getting-started/skeleton-application.md
+          - 'Módulos': getting-started/modules.md
+          - 'Roteamento e Controllers': getting-started/routing-and-controllers.md
+          - 'Banco de Dados e Models': getting-started/database-and-models.md
+          - 'Formulários e Actions': getting-started/forms-and-actions.md
+          - 'Conclusão': getting-started/conclusion.md
+      - 'Realizando Testes Unitários em uma Aplicação zend-mvc': unit-testing.md
+      - 'Adicionando zend-navigation ao Módulo Album': navigation.md
+      - 'Adicionando zend-paginator ao Módulo Album': pagination.md
+      - 'Tutorial Aprofundado':
+          - 'Apresentando o Módulo Blog': in-depth-guide/first-module.md
+          - 'Models e o ServiceManager': in-depth-guide/models-and-servicemanager.md
+          - 'Preparando-se para Bancos de Dados Diferentes': in-depth-guide/preparing-databases.md
+          - 'Abstração de SQL e Hidratação de Objetos': in-depth-guide/zend-db-sql-zend-hydrator.md
+          - 'Entendendo o Router': in-depth-guide/understanding-routing.md
+          - 'Usando Forms e Fieldsets': in-depth-guide/zend-form-zend-form-fieldset.md
+          - 'Editando e Deletando Dados': in-depth-guide/data-binding.md
+          - 'Revisando o Módulo Blog': in-depth-guide/review.md
+      - 'Configuração Avançada': advanced-config.md
+      - 'Internacionalização': i18n.md
+    - 'Tutoriais de Componentes':
+      - 'Configurando um Adapter de Bancos de Dados': db-adapter.md
+      - 'Usando o EventManager': event-manager.md
+    - 'Migração':
+        - 'Para a Versão 3':
+            - 'Visão Geral': migration/to-v3/overview.md
+            - 'Componentes': migration/to-v3/components.md
+            - 'Aplicações': migration/to-v3/application.md
+site_name: tutoriais
+site_description: 'Tutoriais do Zend Framework'
+repo_url: 'https://github.com/arcristo/zend-tutorials-pt-br'
 copyright: 'Copyright (c) 2016 <a href="http://www.zend.com/">Zend Technologies USA Inc.</a>'
 extra:
   scripts: scripts-60a9690001.js
