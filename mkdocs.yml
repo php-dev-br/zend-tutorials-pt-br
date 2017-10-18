@@ -37,3 +37,11 @@ site_name: tutorials
 site_description: "Zend Framework Tutorials"
 repo_url: 'https://github.com/zendframework/tutorials'
 copyright: 'Copyright (c) 2016 <a href="http://www.zend.com/">Zend Technologies USA Inc.</a>'
+extra:
+  scripts: scripts-60a9690001.js
+  styles: styles-482aa2add1.css
+markdown_extensions:
+    - markdown.extensions.codehilite:
+        use_pygments: False
+    - pymdownx.superfences
+theme_dir: zend-doc-theme-pt-br/theme
