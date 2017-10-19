@@ -1,80 +1,80 @@
-# Getting started: A skeleton application
+# Começando: Uma aplicação esqueleto
 
-In order to build our application, we will start with the
+Para construir a nossa aplicação começaremos com a
 [ZendSkeletonApplication](https://github.com/zendframework/ZendSkeletonApplication)
-available on [github](https://github.com/). Use [Composer](<http://getcomposer.org>)
-to create a new project from scratch:
+disponível no [github](https://github.com/). Use o [Composer](<http://getcomposer.org>)
+para criar um novo projeto do zero:
 
 ```bash
-$ composer create-project -s dev zendframework/skeleton-application path/to/install
+$ composer create-project -s dev zendframework/skeleton-application caminho/para/instalar
 ```
 
-This will install an initial set of dependencies, including:
+Isso irá instalar um conjunto initial de dependências, incluindo:
 
-- zend-component-installer, which helps automate injection of component
-  configuration into your application.
-- zend-mvc, the kernel for MVC applications.
+- zend-component-installer, que ajuda a automatizar a injeção de configuração de
+  componentes na sua aplicação.
+- zend-mvc, o kernel para aplicações MVC.
 
-The default is to provide the minimum amount of dependencies necessary to run a
-zend-mvc application. However, you may have additional needs that you know at
-the outset, and, as such, the skeleton also ships with an installer plugin that
-will prompt you for a number of items.
+O padrão é fornecer a quantidade mínima de dependências necessárias para executar uma
+aplicação zend-mvc. Entretanto, você pode ter necessidades adicionais que você conhece desde
+o início, e, assim sendo, o esqueleto também vem com um plugin instalador que
+irá fazer a você algumas perguntas.
 
-First, it will prompt:
+Primeiro, ele irá perguntar:
 
 ```text
     Do you want a minimal install (no optional packages)? Y/n
 ```
 
-> ### Prompts and default values
+> ### Perguntas e valores padrão
 >
-> All prompts emitted by the installer provide the list of options available,
-> and will specify the default option via a capital letter. Default values are
-> used if the user presses "Enter" with no value. In the previous example, "Y"
-> is the default.
+> Todas as perguntas feitas pelo instalador fornecem a lista de opções disponíveis
+> e irão especificar a opção padrão por meio de uma letra maiúscula. Os valores padrão são
+> usados se o usuário pressionar "Enter" sem informar um valor. No exemplo anterior, "Y"
+> é o padrão.
 
-If you answer "Y", or press enter with no selection, the installer will not
-raise any additional prompts, and finish installing your application. If you
-answer "n", it will continue prompting you:
+Se você responder "Y" ou pressionar "Enter" sem nenhuma seleção o instalador não
+fará mais perguntas e irá terminará de instalar a sua aplicação. Se você
+responder "n", ele continuará com as perguntas:
 
 ```text
     Would you like to install the developer toolbar? y/N
 ```
 
-The [developer toolbar](https://github.com/zendframework/ZendDeveloperTools)
-provides an in-browser toolbar with timing and profiling information, and can be
-useful when debugging an application. For the purposes of the tutorial, however,
-we will not be using it; hit either "Enter", or "n" followed by "Enter".
+A [barra de ferramentas do desenvolvedor](https://github.com/zendframework/ZendDeveloperTools)
+fornece uma barra de ferramentas no navegador com informações de tempo e profiling e pode ser
+útil ao debugar uma aplicação. Para os fins do tutorial, entretanto,
+não iremos usá-la; tecle "Enter" ou "n" seguido de "Enter".
 
 ```text
     Would you like to install caching support? y/N
 ```
 
-We will not be demonstrating caching in this tutorial, so either hit "Enter", or
-"n" followed by "Enter".
+Nós não vamos demonstrar o armazenamento em cache neste tutorial, então tecle "Enter" ou
+"n" seguido de "Enter".
 
 ```text
     Would you like to install database support (installs zend-db)? y/N
 ```
 
-We *will* be using zend-db extensively in this tutorial, so hit "y" followed by
-"Enter". You should see the following text appear:
+Nós *iremos* usar zend-db extensivamente neste tutorial, então tecle "y" seguido de
+"Enter". Você deve ver o seguinte texto aparecer:
 
 ```text
     Will install zendframework/zend-db (^2.8.1)
     When prompted to install as a module, select application.config.php or modules.config.php
 ```
 
-The next prompt is:
+A próxima pergunta é:
 
 ```text
     Would you like to install forms support (installs zend-form)? y/N
 ```
 
-This tutorial also uses zend-form, so we will again select "y" to install this;
-doing so emits a similar message to that used for zend-db.
+Este tutorial também usa zend-form, então vamos selecionar novamente "y" para instalá-lo;
+ao fazer isso será emitida uma mensagem parecida com aquela emitida para o zend-db.
 
-At this point, we can answer "n" to the remaining features:
+Neste ponto podemos responder "n" para os seguintes recursos restantes:
 
 ```text
     Would you like to install JSON de/serialization support? y/N
@@ -88,7 +88,7 @@ At this point, we can answer "n" to the remaining features:
     Would you like to install the zend-di integration for zend-servicemanager? y/N
 ```
 
-At a certain point, you'll see the following text:
+Em um certo ponto você verá o seguinte texto:
 
 ```text
 Updating root package
@@ -104,41 +104,41 @@ Updating application configuration...
   Make your selection (default is 0):
 ```
 
-We want to enable the various selections we made in the application. As such,
-we'll choose `1`, which will then give us the following prompt:
+Queremos habilitar as várias seleções que fizemos na aplicação. Assim sendo,
+iremos escolher `1`, o que então nos dará o seguinte prompt:
 
 ```text
   Remember this option for other packages of the same type? (y/N)
 ```
 
-In our case, we can safely say "y", which will mean we will no longer be
-prompted for additional packages. (The only package in the default set of
-prompts that you may not want to enable by default is `Zend\Test`.)
+No nosso caso podemos seguramente dizer "y", o que significa que não seremos mais
+solicitados a escolher pacotes adicionais. (O único pacote no conjunto padrão de
+prompts que você pode não querer habilitar por padrão é `Zend\Test`.)
 
-Once the installation is done, the skeleton installer removes itself, and the
-new application is ready to start!
+Uma vez que a instalação esteja concluída o instalador do esqueleto se remove e a
+nova aplicação está pronta para começar!
 
-> ### Downloading the skeleton
+> ### Baixando o esqueleto
 >
-> Another way to install the ZendSkeletonApplication is to use github to
-> download a compressed archive. Go to
-> https://github.com/zendframework/ZendSkeletonApplication, click the "Clone or
-> download" button, and select "Download ZIP". This will download a file with a
-> name like `ZendSkeletonApplication-master.zip` or similar.
+> Outra forma de instalar a ZendSkeletonApplication é usar o github para
+> baixar um arquivo comprimido. Acesse
+> https://github.com/zendframework/ZendSkeletonApplication, clique no botão "Clone
+> or download" e selecione "Download ZIP". Isso irá baixar um arquivo com um
+> nome como `ZendSkeletonApplication-master.zip` ou algo parecido.
 >
-> Unzip this file into the directory where you keep all your vhosts and rename
-> the resultant directory to `zf-tutorial`.
+> Descompacte este arquivo no diretório onde você mantém todos os seus vhosts e renomeie
+> o diretório resultante para `zf-tutorial`.
 >
-> ZendSkeletonApplication is set up to use [Composer](http://getcomposer.org)
-> to resolve its dependencies. Run the following from within your new
-> zf-tutorial folder to install them:
+> A ZendSkeletonApplication está configurada para usar o [Composer](http://getcomposer.org)
+> para resolver suas dependências. Execute o seguinte de dentro da sua nova
+> pasta zf-tutorial para instalá-las:
 >
 > ```bash
 > $ composer self-update
 > $ composer install
 > ```
 >
-> This takes a while. You should see output like the following:
+> Isso demora um pouco. Você deve ver uma saída como a seguinte:
 >
 > ```text
 > Installing dependencies from lock file
@@ -149,107 +149,107 @@ new application is ready to start!
 > Generating autoload files
 > ```
 >
-> At this point, you will be prompted to answer questions as noted above.
+> Neste ponto você será solicitado a responder algumas perguntas como mencionado acima.
 >
-> Alternately, if you do not have Composer installed, but *do* have either
-> Vagrant or docker-compose available, you can run Composer via those:
+> Por outro lado, se você não tem o Composer instalado mas *tem* o
+> Vagrant ou o docker-compose disponível você pode rodar o Composer através deles:
 >
 > ```bash
-> # For Vagrant:
+> # Para o Vagrant:
 > $ vagrant up
 > $ vagrant ssh -c 'composer install'
-> # For docker-compose:
+> # Para o docker-compose:
 > $ docker-compose build
 > $ docker-compose run zf composer install
 > ```
 
-> ### Timeouts
+> ### Tempos limite
 >
-> If you see this message:
+> Se você vir esta mensagem:
 >
 > ```text
 > [RuntimeException]      
 >   The process timed out.
 > ```
 >
-> then your connection was too slow to download the entire package in time, and
-> composer timed out. To avoid this, instead of running:
+> então sua conexão estava muito lenta para baixar o pacote inteiro a tempo e
+> o composer expirou. Para evitar isso, ao invés de executar:
 >
 > ```bash
 > $ composer install
 > ```
 >
-> run instead:
+> execute isso:
 >
 > ```bash
 > $ COMPOSER_PROCESS_TIMEOUT=5000 composer install
 > ```
 
-> ### Windows users using WAMP
+> ### Usuários do Windows usando o WAMP
 >
-> For windows users with wamp:
+> Para usuários do Windows com o WAMP:
 >
-> 1. Install [composer for windows](https://getcomposer.org/doc/00-intro.md#installation-windows).
->    Check composer is properly installed by running:
+> 1. Instale o [composer para o Windows](https://getcomposer.org/doc/00-intro.md#installation-windows).
+>    Verifique se o composer está instalado corretamente executando:
 >
 >    ```bash
 >    $ composer
 >    ```
 >
-> 2. Install [GitHub Desktop](https://desktop.github.com/) for windows.
-     Check git is properly installed by running:
+> 2. Instale o [GitHub Desktop](https://desktop.github.com/) para Windows.
+     Verifique se o git está instalado corretamente executando:
 >
 >    ```bash
 >    $ git
 >    ```
 >
-> 3. Now install the skeleton using:
+> 3. Agora instale o esqueleto usando:
 >
 >    ```bash
->    $ composer create-project -s dev zendframework/skeleton-application path/to/install
+>    $ composer create-project -s dev zendframework/skeleton-application caminho/para/instalar
 >    ```
 
-We can now move on to the web server setup.
+Agora podemos avançar para a configuração do servidor web.
 
-## Web Servers
+## Servidores Web
 
-In this tutorial, we will step you through four different ways to setup your web
-server:
+Neste tutorial passaremos por quatro formas diferentes de configurar seu servidor
+web:
 
-- Via the PHP built-in web server.
-- Via Vagrant.
-- Via docker-compose.
-- Using Apache.
+- Através do servidor web interno do PHP.
+- Através do Vagrant.
+- Através do docker-compose.
+- Usando o Apache.
 
-### Using the Built-in PHP web Server
+### Usando o Servidor Web Interno do PHP
 
-You can use PHP's built-in web server when developing your application. To do
-this, start the server from the project's root directory:
+Você pode usar o servidor web interno do PHP ao desenvolver sua aplicação. Para fazer
+isso inicie o servidor a partir do diretório raiz do projeto:
 
 ```bash
 $ php -S 0.0.0.0:8080 -t public public/index.php
 ```
 
-This will make the website available on port 8080 on all network interfaces,
-using `public/index.php` to handle routing. This means the site is accessible
-via `http://localhost:8080` or `http://<your-local-IP>:8080`.
+Isso tornará o site disponível na porta 8080 de todas as interfaces de rede,
+usando `public/index.php` para lidar com o roteamento. Isso significa que o site está acessível
+através de `http://localhost:8080` ou `http://<seu-IP-local>:8080`.
 
-If you’ve done it right, you should see the following.
+Se você fez tudo certo, você deve ver o seguinte.
 
-![zend-mvc Hello World](../images/user-guide.skeleton-application.hello-world.png)
+![Olá Mundo com o zend-mvc](../images/user-guide.skeleton-application.hello-world.png)
 
-To test that your routing is working, navigate to `http://localhost:8080/1234`,
-and you should see the following 404 page:
+Para testar que o seu roteamento está funcionando acesse `http://localhost:8080/1234`
+e você deve ver a seguinte página 404:
 
-![zend-mvc 404 page](../images/user-guide.skeleton-application.404.png)
+![Página 404 do zend-mvc](../images/user-guide.skeleton-application.404.png)
 
-> #### Development only
+> #### Apenas para Desenvolvimento
 >
-> PHP's built-in web server should be used **for development only**.
+> O servidor web interno do PHP deve ser usado **apenas para desenvolvimento**.
 
-### Using Vagrant
+### Usando o Vagrant
 
-[Vagrant](https://www.vagrantup.com/) provides a way to describe and provision
+O [Vagrant](https://www.vagrantup.com/) fornece uma maneira de descrever e provisionar
 virtual machines, and is a common way to provide a coherent and consistent
 development environment for development teams. The skeleton application provides
 a `Vagrantfile` based on Ubuntu 14.04, and using the `ondrej/php` PPA to provide

@@ -30,7 +30,7 @@ inicial neste tutorial se você não configurou o uso do `mod_rewrite` e
 >
 > Por outro lado, você também pode usar qualquer uma das seguintes opções:
 >
-> - O servidor web interno do PHP. Execute `php -S 0.0.0.0:8080 -t
+> - O servidor web interno do PHP. Execute `php -S 0.0.0.0:8080 -t public
 >   public/index.php` na raiz de sua aplicação para iniciar um servidor web escutando
 >   na porta 8080.
 > - Use o `Vagrantfile` enviado, executando `vagrant up` a partir da
