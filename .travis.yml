@@ -1,0 +1,29 @@
+language: python
+
+os:   linux
+dist: trusty
+sudo: required
+
+python:
+  - '3.6'
+
+cache: pip
+
+branches:
+  only:
+    - master
+
+install:
+  - git submodule update --init --recursive
+  - zend-doc-theme-pt-br/bin/travis.sh
+
+script:
+  - mkdocs build
+
+deploy:
+  provider:     pages
+  skip_cleanup: true
+  github_token: ${GITHUB_TOKEN}
+  local_dir:    'doc/html'
+  on:
+    branch: master
