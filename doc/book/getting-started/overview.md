@@ -22,7 +22,7 @@ AllowOverride FileInfo
 ```
 
 no seu arquivo `httpd.conf`. Verifique na documentação da sua distribuição para
-detalhes exatos. Você não poderá navegar para qualquer outra página além da página
+detalhes exatos. Você não poderá navegar para nenhuma outra página além da página
 inicial neste tutorial se você não configurou o uso do `mod_rewrite` e
 `.htaccess` corretamente.
 
@@ -52,7 +52,7 @@ Página               | Descrição
 Lista de álbuns      | Esta página exibirá a lista de álbuns e fornecerá links para editá-los e excluí-los. Além disso, um link para permitir a adição de novos álbuns será fornecido.
 Adicionar novo álbum | Esta página fornecerá um formulário para adicionar um novo álbum.
 Editar álbum         | Esta página fornecerá um formulário para editar um álbum.
-Excluir álbum        | Esta página irá confirmará que queremos excluir um álbum e então irá excluí-lo.
+Excluir álbum        | Esta página irá confirmar que queremos excluir um álbum e então irá excluí-lo.
 
 Também precisaremos armazenar nossos dados em um banco de dados. Nós só iremos precisar de uma tabela
 com estes campos:
