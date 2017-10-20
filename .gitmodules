@@ -1,3 +1,3 @@
 [submodule "zend-doc-theme-pt-br"]
 	path = zend-doc-theme-pt-br
-	url = git://github.com/arcristo/zend-doc-theme-pt-br.git
+	url = https://github.com/arcristo/zend-doc-theme-pt-br.git
