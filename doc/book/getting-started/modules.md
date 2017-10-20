@@ -1,26 +1,26 @@
-# Modules
+# Módulos
 
-zend-mvc uses a module system to organise your main application-specific
-code within each module. The `Application` module provided by the skeleton is used
-to provide bootstrapping, error, and routing configuration to the whole
-application. It is usually used to provide application level controllers for
-the home page of an application, but we are not going to use the default
-one provided in this tutorial as we want our album list to be the home page,
-which will live in our own module.
+O zend-mvc usa um sistema de módulos para organizar seu código específico da aplicação
+principal dentro de cada módulo. O módulo `Application` fornecido pelo esqueleto é usado
+para fornecer configuração de bootstrapping, erro e roteamento para toda a
+aplicação. Ele geralmente é usado para fornecer controllers a nível de aplicação para
+a página inicial de uma aplicação, mas não vamos usar o padrão
+fornecido neste tutorial, pois queremos que nossa lista de álbuns seja a página inicial,
+que ficará em nosso próprio módulo.
 
-We are going to put all our code into the `Album` module which will contain our
-controllers, models, forms and views, along with configuration. We’ll also tweak
-the `Application` module as required.
+Vamos colocar todo o nosso código no módulo `Album`, que irá conter nossos
+controllers, models, forms e views, juntamente com a configuração. Também ajustaremos
+o módulo `Application` conforme necessário.
 
-Let’s start with the directories required.
+Vamos começar com os diretórios necessários.
 
-## Setting up the Album module
+## Configurando o módulo Album
 
-Start by creating a directory called `Album` under `module` with the following
-subdirectories to hold the module’s files:
+Comece criando um diretório chamado `Album` em `module` com os seguintes
+subdiretórios para manter os arquivos do módulo:
 
 ```text
-zf-tutorial/
+tutorial-zf/
     /module
         /Album
             /config
@@ -33,17 +33,17 @@ zf-tutorial/
                     /album
 ```
 
-The `Album` module has separate directories for the different types of files we
-will have. The PHP files that contain classes within the `Album` namespace live
-in the `src/` directory. The view directory also has a sub-folder called `album`
-for our module's view scripts.
+O módulo `Album` possui diretórios separados para os diferentes tipos de arquivos que
+teremos. Os arquivos PHP que contêm classes dentro do namespace `Album` ficam
+no diretório `src/`. O diretório `view` também tem uma sub-pasta chamada `album`
+para os view scripts do nosso módulo.
 
-In order to load and configure a module, Zend Framework provides a
-`ModuleManager`.  This will look for a `Module` class in the specified module
-namespace (i.e., `Album`); in the case of our new module, that means the class
-`Album\Module`, which will be found in `module/Album/src/Module.php`.
+Para carregar e configurar um módulo, o Zend Framework fornece um
+`ModuleManager`. Este irá procurar por uma classe `Module` no namespace do módulo
+especificado (ou seja, `Album`); no caso do nosso novo módulo, isso significa a classe
+`Album\Module`, que será encontrada em `module/Album/src/Module.php`.
 
-Let's create that file now, with the following contents:
+Vamos criar esse arquivo agora, com o seguinte conteúdo:
 
 ```php
 namespace Album;
@@ -59,17 +59,17 @@ class Module implements ConfigProviderInterface
 }
 ```
 
-The `ModuleManager` will call `getConfig()` automatically for us.
+O `ModuleManager` chamará `getConfig()` automaticamente para nós.
 
 ### Autoloading
 
-While Zend Framework provides autoloading capabilities via its
-[zend-loader](https://zendframework.github.io/zend-loader) component, we
-recommend using Composer's autoloading capabilities. As such, we need to inform
-Composer of our new namespace, and where its files live.
+Embora o Zend Framework forneça recursos de autoloading através do seu
+componente [zend-loader](https://zendframework.github.io/zend-loader),
+recomendamos o uso dos recursos de autoloading do Composer. Assim sendo, precisamos informar
+ao Composer nosso novo namespace, e onde seus arquivos ficam.
 
-Open `composer.json` in your project root, and look for the `autoload` section;
-it should look like the following by default:
+Abra o `composer.json` na raiz do seu projeto, e procure a seção `autoload`;
+ela deve parecer o seguinte por padrão:
 
 ```json
 "autoload": {
@@ -79,7 +79,7 @@ it should look like the following by default:
 },
 ```
 
-We'll now add our new module to the list, so it now reads:
+Agora vamos adicionar o nosso novo módulo à lista, então agora a seção é lida assim:
 
 ```json
 "autoload": {
@@ -90,21 +90,21 @@ We'll now add our new module to the list, so it now reads:
 },
 ```
 
-Once you've made that change, run the following to ensure Composer updates its
-autoloading rules:
+Depois de fazer essa alteração, execute o seguinte comando para garantir que o Composer atualize suas
+regras de autoloading:
 
 ```bash
 $ composer dump-autoload
 ```
 
-## Configuration
+## Configuração
 
-Having registered the autoloader, let’s have a quick look at the `getConfig()`
-method in `Album\Module`. This method loads the `config/module.config.php` file
-under the module's root directory.
+Tendo registrado o autoloader, vamos dar uma olhada no método `getConfig()`
+em `Album\Module`. Este método carrega o arquivo `config/module.config.php`
+no diretório raiz do módulo.
 
-Create a file called `module.config.php` under
-`zf-tutorial/module/Album/config/`:
+Crie um arquivo chamado `module.config.php` em
+`tutorial-zf/module/Album/config/`:
 
 ```php
 namespace Album;
@@ -125,26 +125,26 @@ return [
 ];
 ```
 
-The config information is passed to the relevant components by the
-`ServiceManager`. We need two initial sections: `controllers` and
-`view_manager`. The controllers section provides a list of all the controllers
-provided by the module. We will need one controller, `AlbumController`; we'll
-reference it by its fully qualified class name, and use the zend-servicemanager
-`InvokableFactory` to create instances of it.
+A informação de configuração é passada para os componentes relevantes pelo
+`ServiceManager`. Precisamos de duas seções iniciais: `controllers` e
+`view_manager`. A seção `controllers` fornece uma lista de todos os controllers
+fornecidos pelo módulo. Nós precisaremos de um controller, `AlbumController`; iremos
+referenciá-lo pelo seu nome de classe totalmente qualificado, e usaremos a `InvokableFactory`
+do zend-servicemanager para criar instâncias dele.
 
-Within the `view_manager` section, we add our view directory to the
-`TemplatePathStack` configuration. This will allow it to find the view scripts
-for the `Album` module that are stored in our `view/` directory.
+Na seção `view_manager`, adicionamos nosso diretório de view à
+configuração `TemplatePathStack`. Isso permitirá que ele encontre os view scripts
+do módulo `Album` que estão armazenados em nosso diretório `view/`.
 
-## Informing the application about our new module
+## Informando a aplicação sobre nosso novo módulo
 
-We now need to tell the `ModuleManager` that this new module exists. This is
-done in the application’s `config/modules.config.php` file which is provided
-by the skeleton application. Update this file so that the array it returns
-contains the `Album` module as well, so the file now looks like this:
+Agora precisamos dizer ao `ModuleManager` que este novo módulo existe. Isso é
+feito no arquivo `config/modules.config.php` da aplicação, que é fornecido
+pela aplicação esqueleto. Atualize este arquivo para que o array que ele retorna
+também contenha o módulo `Album`, então o arquivo agora parece com isso:
 
-(Changes required are highlighted using comments; original comments from the
-file are omitted for brevity.)
+(As alterações necessárias estão destacadas usando comentários; os comentários originais do
+arquivo foram omitidos por brevidade.)
 
 ```php
 return [
@@ -153,11 +153,11 @@ return [
     'Zend\Router',
     'Zend\Validator',
     'Application',
-    'Album',          // <-- Add this line
+    'Album',          // <-- Adicione esta linha
 ];
 ```
 
-As you can see, we have added our `Album` module into the list of modules after
-the `Application` module.
+Como você pode ver, adicionamos nosso módulo `Album` na lista de módulos após
+o módulo `Application`.
 
-We have now set up the module ready for putting our custom code into it.
+Agora deixamos o módulo configurado, pronto para colocar nosso código personalizado nele.
