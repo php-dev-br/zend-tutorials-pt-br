@@ -17,7 +17,7 @@ install:
   - zend-doc-theme-pt-br/bin/travis.sh
 
 script:
-  - zend-doc-theme-pt-br/bin/build.sh
+  - zend-doc-theme-pt-br/bin/build.sh -t "${SITE_TITLE}"
   - mkdocs build
 
 deploy:

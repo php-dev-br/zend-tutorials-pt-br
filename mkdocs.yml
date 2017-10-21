@@ -40,6 +40,7 @@ copyright: 'Copyright (c) 2016 <a href="http://www.zend.com/">Zend Technologies 
 extra:
   scripts: scripts-60a9690001.js
   styles: styles-482aa2add1.css
+  site_title: Tutoriais do Zend Framework
 markdown_extensions:
     - markdown.extensions.codehilite:
         use_pygments: False
