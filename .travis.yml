@@ -14,11 +14,10 @@ branches:
     - master
 
 install:
-  - git submodule update --init --recursive
-  - git submodule foreach git pull origin master
   - zend-doc-theme-pt-br/bin/travis.sh
 
 script:
+  - zend-doc-theme-pt-br/bin/build.sh
   - mkdocs build
 
 deploy:
