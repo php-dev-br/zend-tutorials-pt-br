@@ -37,6 +37,7 @@ site_name: tutoriais
 site_description: 'Tutoriais do Zend Framework'
 repo_url: 'https://github.com/arcristo/zend-tutorials-pt-br'
 copyright: 'Copyright (c) 2016 <a href="http://www.zend.com/">Zend Technologies USA Inc.</a>'
+google_analytics: ['UA-108409296-1', 'tutoriais-zend.adielcristo.com']
 extra:
   scripts: scripts-60a9690001.js
   styles: styles-482aa2add1.css
