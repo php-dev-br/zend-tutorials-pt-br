@@ -3,7 +3,7 @@
 Este repositório contém tutoriais para aprender o Zend Framework, particularmente
 em torno da construção de aplicações zend-mvc.
 
-Consulte a [documentação gerada](https://arcristo.github.io/zend-tutorials-pt-br/).
+Consulte a [documentação gerada](https://tutoriais-zend.adielcristo.com/).
 
 # Doações
 
