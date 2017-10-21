@@ -27,3 +27,7 @@ deploy:
   local_dir:    'doc/html'
   on:
     branch: master
+
+env:
+  global:
+    - SITE_TITLE="Tutoriais do Zend Framework"
