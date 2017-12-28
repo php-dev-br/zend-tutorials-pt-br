@@ -1,0 +1,829 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tutoriais do Zend Framework">  
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    <title>A Aplicação Esqueleto - Tutoriais do Zend Framework</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w="
+        crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../css/styles-288837cc22.css">
+
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108409296-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-108409296-1');
+    </script>
+    
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Alternar navegação</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <span class="navbar-brand">
+                <a class="logo-link" href="https://framework.zend.com/" data-toggle="tooltip" data-placement="bottom" title="Ir para a página inicial do Zend Framework"><img src="../../img/zf-logo-mark.svg" height="28" alt="Zend Framework" /></a>
+                <a href="../..">tutoriais</a>
+            </span>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutoriais sobre MVC <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Começando com o Zend Framework</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../overview/">Visão Geral</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">A Aplicação Esqueleto</a>
+</li>
+
+        
+            
+<li >
+    <a href="../modules/">Módulos</a>
+</li>
+
+        
+            
+<li >
+    <a href="../routing-and-controllers/">Roteamento e Controllers</a>
+</li>
+
+        
+            
+<li >
+    <a href="../database-and-models/">Banco de Dados e Models</a>
+</li>
+
+        
+            
+<li >
+    <a href="../forms-and-actions/">Formulários e Actions</a>
+</li>
+
+        
+            
+<li >
+    <a href="../conclusion/">Conclusão</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../../unit-testing/">Realizando Testes Unitários em uma Aplicação zend-mvc</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../navigation/">Adicionando zend-navigation ao Módulo Album</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../pagination/">Adicionando zend-paginator ao Módulo Album</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Tutorial Aprofundado</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../in-depth-guide/first-module/">Apresentando o Módulo Blog</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../in-depth-guide/models-and-servicemanager/">Models e o ServiceManager</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../in-depth-guide/preparing-databases/">Preparando-se para Bancos de Dados Diferentes</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../in-depth-guide/zend-db-sql-zend-hydrator/">Abstração de SQL e Hidratação de Objetos</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../in-depth-guide/understanding-routing/">Entendendo o Router</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../in-depth-guide/zend-form-zend-form-fieldset/">Usando Forms e Fieldsets</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../in-depth-guide/data-binding/">Editando e Deletando Dados</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../in-depth-guide/review/">Revisando o Módulo Blog</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../../advanced-config/">Configuração Avançada</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../i18n/">Internacionalização</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutoriais de Componentes <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../db-adapter/">Configurando um Adapter de Bancos de Dados</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../event-manager/">Usando o EventManager</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Migração <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Para a Versão 3</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../migration/to-v3/overview/">Visão Geral</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../migration/to-v3/components/">Componentes</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../migration/to-v3/application/">Aplicações</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" class="component-toggle" data-toggle="tooltip" data-placement="bottom" title="Exibir lista de componentes">
+                        <i class="fa fa-book"></i> Componentes
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Pesquisar
+                    </a>
+                </li>
+                
+                    <li>
+                        <a href="https://github.com/arcristo/zend-tutorials-pt-br/">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+    
+        <div id="page-top" class="container docs">
+            
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#comecando-uma-aplicacao-esqueleto">Começando: Uma aplicação esqueleto</a></li>
+        
+            <li><a href="#perguntas-e-valores-padrao">Perguntas e valores padrão</a></li>
+        
+            <li><a href="#baixando-o-esqueleto">Baixando o esqueleto</a></li>
+        
+            <li><a href="#tempos-limite">Tempos limite</a></li>
+        
+            <li><a href="#usuarios-do-windows-usando-o-wamp">Usuários do Windows usando o WAMP</a></li>
+        
+            <li><a href="#servidores-web">Servidores Web</a></li>
+        
+            <li><a href="#relatorio-de-erros">Relatório de erros</a></li>
+        
+            <li><a href="#modo-de-desenvolvimento">Modo de desenvolvimento</a></li>
+        
+    
+    </ul>
+
+    
+    <ul class="pager hidden-print">
+      <li class="previous">
+        <a rel="prev" href="../overview/"><i class="fa fa-arrow-left"></i> Anterior</a>
+      </li>
+      <li class="next">
+        <a rel="next" href="../modules/">Próxima <i class="fa fa-arrow-right"></i></a>
+      </li>
+    </ul>
+    
+</div></div>
+            <div class="col-md-9" role="main">
+
+<ol class="breadcrumb" role="navigation" aria-label="breadcrumbs navigation">
+  <li><a href="../..">tutoriais</a></li>
+  
+    
+      
+        <li>Tutoriais sobre MVC</li>
+      
+    
+      
+        <li>Começando com o Zend Framework</li>
+      
+    
+  
+  <li class="active">A Aplicação Esqueleto</li>
+</ol>
+
+<h1 id="comecando-uma-aplicacao-esqueleto">Começando: Uma aplicação esqueleto</h1>
+<p>Para construir a nossa aplicação começaremos com a
+<a href="https://github.com/zendframework/ZendSkeletonApplication">ZendSkeletonApplication</a>
+disponível no <a href="https://github.com/">github</a>. Use o <a href="http://getcomposer.org">Composer</a>
+para criar um novo projeto do zero:</p>
+<pre class="codehilite"><code class="language-bash">$ composer create-project -s dev zendframework/skeleton-application caminho/para/instalar</code></pre>
+
+<p>Isso irá instalar um conjunto initial de dependências, incluindo:</p>
+<ul>
+<li>zend-component-installer, que ajuda a automatizar a injeção de configuração de
+  componentes na sua aplicação.</li>
+<li>zend-mvc, o kernel para aplicações MVC.</li>
+</ul>
+<p>O padrão é fornecer a quantidade mínima de dependências necessárias para executar uma
+aplicação zend-mvc. Entretanto, você pode ter necessidades adicionais que você conhece desde
+o início, e, assim sendo, o esqueleto também vem com um plugin instalador que
+irá fazer a você algumas perguntas.</p>
+<p>Primeiro, ele irá perguntar:</p>
+<pre class="codehilite"><code class="language-text">    Do you want a minimal install (no optional packages)? Y/n</code></pre>
+
+<blockquote>
+<h3 id="perguntas-e-valores-padrao">Perguntas e valores padrão</h3>
+<p>Todas as perguntas feitas pelo instalador fornecem a lista de opções disponíveis,
+e irão especificar a opção padrão por meio de uma letra maiúscula. Os valores padrão são
+usados se o usuário pressionar "Enter" sem informar um valor. No exemplo anterior, "Y"
+é o padrão.</p>
+</blockquote>
+<p>Se você responder "Y", ou pressionar "Enter" sem nenhuma seleção, o instalador não
+fará mais perguntas e irá terminará de instalar a sua aplicação. Se você
+responder "n", ele continuará com as perguntas:</p>
+<pre class="codehilite"><code class="language-text">    Would you like to install the developer toolbar? y/N</code></pre>
+
+<p>A <a href="https://github.com/zendframework/ZendDeveloperTools">barra de ferramentas do desenvolvedor</a>
+fornece uma barra de ferramentas no navegador com informações de tempo e profiling, e pode ser
+útil ao debugar uma aplicação. Para os fins do tutorial, entretanto,
+não iremos usá-la; tecle "Enter" ou "n" seguido de "Enter".</p>
+<pre class="codehilite"><code class="language-text">    Would you like to install caching support? y/N</code></pre>
+
+<p>Nós não vamos demonstrar o armazenamento em cache neste tutorial, então tecle "Enter" ou
+"n" seguido de "Enter".</p>
+<pre class="codehilite"><code class="language-text">    Would you like to install database support (installs zend-db)? y/N</code></pre>
+
+<p>Nós <em>iremos</em> usar zend-db extensivamente neste tutorial, então tecle "y" seguido de
+"Enter". Você deve ver o seguinte texto aparecer:</p>
+<pre class="codehilite"><code class="language-text">    Will install zendframework/zend-db (^2.8.1)
+    When prompted to install as a module, select application.config.php or modules.config.php</code></pre>
+
+<p>A próxima pergunta é:</p>
+<pre class="codehilite"><code class="language-text">    Would you like to install forms support (installs zend-form)? y/N</code></pre>
+
+<p>Este tutorial também usa zend-form, então vamos selecionar novamente "y" para instalá-lo;
+ao fazer isso será emitida uma mensagem parecida com aquela emitida para o zend-db.</p>
+<p>Neste ponto, podemos responder "n" para os seguintes recursos restantes:</p>
+<pre class="codehilite"><code class="language-text">    Would you like to install JSON de/serialization support? y/N
+    Would you like to install logging support? y/N
+    Would you like to install MVC-based console support? (We recommend migrating to zf-console, symfony/console, or Aura.CLI) y/N
+    Would you like to install i18n support? y/N
+    Would you like to install the official MVC plugins, including PRG support, identity, and flash messages? y/N
+    Would you like to use the PSR-7 middleware dispatcher? y/N
+    Would you like to install sessions support? y/N
+    Would you like to install MVC testing support? y/N
+    Would you like to install the zend-di integration for zend-servicemanager? y/N</code></pre>
+
+<p>Em um determinado ponto, você verá o seguinte texto:</p>
+<pre class="codehilite"><code class="language-text">Updating root package
+    Running an update to install optional packages
+
+...
+
+Updating application configuration...
+
+  Please select which config file you wish to inject 'Zend\Db' into:
+  [0] Do not inject
+  [1] config/modules.config.php
+  Make your selection (default is 0):</code></pre>
+
+<p>Queremos habilitar as várias seleções que fizemos na aplicação. Assim sendo,
+iremos escolher <code>1</code>, o que então nos dará o seguinte aviso:</p>
+<pre class="codehilite"><code class="language-text">  Remember this option for other packages of the same type? (y/N)</code></pre>
+
+<p>Em nosso caso, podemos seguramente dizer "y", o que significa que não seremos mais
+solicitados a escolher pacotes adicionais. (O único pacote no conjunto padrão de
+perguntas que você pode não querer habilitar por padrão é <code>Zend\Test</code>.)</p>
+<p>Uma vez que a instalação esteja concluída, o instalador do esqueleto irá se remover, e a
+nova aplicação está pronta para começar!</p>
+<blockquote>
+<h3 id="baixando-o-esqueleto">Baixando o esqueleto</h3>
+<p>Outra forma de instalar a ZendSkeletonApplication é usar o github para
+baixar um arquivo comprimido. Acesse
+https://github.com/zendframework/ZendSkeletonApplication, clique no botão "Clone
+or download", e selecione "Download ZIP". Isso irá baixar um arquivo com um
+nome como <code>ZendSkeletonApplication-master.zip</code> ou algo parecido.</p>
+<p>Descompacte este arquivo no diretório onde você mantém todos os seus vhosts e renomeie
+o diretório resultante para <code>tutorial-zf</code>.</p>
+<p>A ZendSkeletonApplication está configurada para usar o <a href="http://getcomposer.org">Composer</a>
+para resolver suas dependências. Execute o seguinte de dentro da sua nova
+pasta tutorial-zf para instalá-las:</p>
+<pre class="codehilite"><code class="language-bash">$ composer self-update
+$ composer install</code></pre>
+
+<p>Isso demora um pouco. Você deve ver uma saída como a seguinte:</p>
+<pre class="codehilite"><code class="language-text">Installing dependencies from lock file
+- Installing zendframework/zend-component-installer (0.2.0)
+  
+...
+
+Generating autoload files</code></pre>
+
+<p>Neste ponto, você será solicitado a responder algumas perguntas como mencionado acima.</p>
+<p>Por outro lado, se você não tem o Composer instalado, mas <em>tem</em> o
+Vagrant ou o docker-compose disponível, você pode executar o Composer através deles:</p>
+<pre class="codehilite"><code class="language-bash"># Para o Vagrant:
+$ vagrant up
+$ vagrant ssh -c 'composer install'
+# Para o docker-compose:
+$ docker-compose build
+$ docker-compose run zf composer install</code></pre>
+
+<h3 id="tempos-limite">Tempos limite</h3>
+<p>Se você ver esta mensagem:</p>
+<pre class="codehilite"><code class="language-text">[RuntimeException]      
+  The process timed out.</code></pre>
+
+<p>então sua conexão estava muito lenta para baixar o pacote inteiro a tempo, e
+o composer expirou. Para evitar isso, ao invés de executar:</p>
+<pre class="codehilite"><code class="language-bash">$ composer install</code></pre>
+
+<p>execute isso:</p>
+<pre class="codehilite"><code class="language-bash">$ COMPOSER_PROCESS_TIMEOUT=5000 composer install</code></pre>
+
+<h3 id="usuarios-do-windows-usando-o-wamp">Usuários do Windows usando o WAMP</h3>
+<p>Para usuários do Windows com o WAMP:</p>
+<ol>
+<li>Instale o <a href="https://getcomposer.org/doc/00-intro.md#installation-windows">composer para o Windows</a>.
+   Verifique se o composer está instalado corretamente executando:</li>
+</ol>
+<pre class="codehilite"><code class="language-bash">$ composer</code></pre>
+
+<ol>
+<li>Instale o <a href="https://desktop.github.com/">GitHub Desktop</a> para Windows.
+     Verifique se o git está instalado corretamente executando:</li>
+</ol>
+<pre class="codehilite"><code class="language-bash">$ git</code></pre>
+
+<ol>
+<li>Agora instale o esqueleto usando:</li>
+</ol>
+<pre class="codehilite"><code class="language-bash">$ composer create-project -s dev zendframework/skeleton-application caminho/para/instalar</code></pre>
+
+</blockquote>
+<p>Agora podemos avançar para a configuração do servidor web.</p>
+<h2 id="servidores-web">Servidores Web</h2>
+<p>Neste tutorial, passaremos por quatro formas diferentes de configurar seu servidor
+web:</p>
+<ul>
+<li>Através do servidor web interno do PHP.</li>
+<li>Através do Vagrant.</li>
+<li>Através do docker-compose.</li>
+<li>Usando o Apache.</li>
+</ul>
+<h3 id="usando-o-servidor-web-interno-do-php">Usando o Servidor Web Interno do PHP</h3>
+<p>Você pode usar o servidor web interno do PHP ao desenvolver sua aplicação. Para fazer
+isso, inicie o servidor a partir do diretório raiz do projeto:</p>
+<pre class="codehilite"><code class="language-bash">$ php -S 0.0.0.0:8080 -t public public/index.php</code></pre>
+
+<p>Isso tornará o site disponível na porta 8080 de todas as interfaces de rede,
+usando <code>public/index.php</code> para lidar com o roteamento. Isso significa que o site estará acessível
+através de <code>http://localhost:8080</code> ou <code>http://&lt;seu-IP-local&gt;:8080</code>.</p>
+<p>Se você fez isso direito, você deve ver o seguinte:</p>
+<p><img alt="Olá, Mundo com o zend-mvc" src="../../images/user-guide.skeleton-application.hello-world.png" /></p>
+<p>Para testar que o seu roteamento está funcionando, acesse <code>http://localhost:8080/1234</code>,
+e você deve ver a seguinte página 404:</p>
+<p><img alt="Página 404 do zend-mvc" src="../../images/user-guide.skeleton-application.404.png" /></p>
+<blockquote>
+<h4 id="apenas-para-desenvolvimento">Apenas para desenvolvimento</h4>
+<p>O servidor web interno do PHP deve ser usado <strong>apenas para desenvolvimento</strong>.</p>
+</blockquote>
+<h3 id="usando-o-vagrant">Usando o Vagrant</h3>
+<p>O <a href="https://www.vagrantup.com/">Vagrant</a> fornece uma maneira de descrever e provisionar
+máquinas virtuais, e é uma maneira comum de fornecer um ambiente de desenvolvimento
+coerente e consistente para as equipes de desenvolvimento. A aplicação esqueleto fornece
+um <code>Vagrantfile</code> baseado no Ubuntu 14.04, e usa o PPA <code>ondrej/php</code> para fornecer o
+PHP 7.0. Inicie o Vagrant usando:</p>
+<pre class="codehilite"><code class="language-bash">$ vagrant up</code></pre>
+
+<p>Uma vez que ele tenha sido construído e esteja rodando, você poderá também executar o composer a partir da
+máquina virtual. Como exemplo, o seguinte comando irá instalar as dependências:</p>
+<pre class="codehilite"><code class="language-bash">$ vagrant ssh -c 'composer install'</code></pre>
+
+<p>enquanto este irá atualizá-las:</p>
+<pre class="codehilite"><code class="language-bash">$ vagrant ssh -c 'composer update'</code></pre>
+
+<p>A imagem usa o Apache 2.4, e mapeia a porta 8080 do host para a porta 80 na máquina
+virtual.</p>
+<h3 id="usando-o-docker-compose">Usando o docker-compose</h3>
+<p>Os containers do <a href="https://www.docker.com/">Docker</a> empacotam uma porção de software e tudo o que é necessário para executá-lo,
+garantindo uma operação consistente independentemente do ambiente do host; o Docker é uma
+alternativa às máquinas virtuais, pois é executado como uma camada em cima do ambiente do
+host.</p>
+<p>O <a href="https://docs.docker.com/compose/">docker-compose</a> é uma ferramenta para automatizar
+a configuração de containers e compor as dependências entre eles, como
+armazenamento de volume, rede, etc.</p>
+<p>A aplicação esqueleto vem com um <code>Dockerfile</code> e configuração para o
+docker-compose; recomendamos usar o docker-compose, pois ele fornece uma base
+para mapear containers adicionais que você possa precisar como parte de sua aplicação,
+incluindo um servidor de banco de dados, servidores de cache, entre outros. Para construir a imagem e iniciar os
+containers, use:</p>
+<pre class="codehilite"><code class="language-bash">$ docker-compose up -d --build</code></pre>
+
+<p>Depois da primeira construção, você pode reduzir o comando para:</p>
+<pre class="codehilite"><code class="language-bash">$ docker-compose up -d</code></pre>
+
+<p>Uma vez construída a imagem, você também pode executar comandos no container. A configuração
+do docker-compose inicialmente define apenas um container, com o nome de ambiente
+"zf"; use-o para executar comandos, como atualizar dependências via composer:</p>
+<pre class="codehilite"><code class="language-bash">$ docker-compose run zf composer update</code></pre>
+
+<p>A configuração inclui o PHP 7.0 e o Apache 2.4, e mapeia a porta 8080 do
+host para a porta 80 do container.</p>
+<h3 id="usando-o-servidor-web-apache">Usando o Servidor Web Apache</h3>
+<p>Não abordaremos a instalação do <a href="https://httpd.apache.org">Apache</a>, e assumiremos
+que você já o tenha instalado. Recomendamos instalar o Apache 2.4, e iremos cobrir
+apenas a configuração para esta versão.</p>
+<p>Agora você precisa criar um virtual host no Apache para a aplicação e editar seu
+arquivo de hosts para que <code>http://tutorial-zf.localhost</code> sirva o <code>index.php</code> do
+diretório <code>tutorial-zf/public/</code>.</p>
+<p>A configuração do virtual host geralmente é feita no <code>httpd.conf</code> ou em
+<code>extra/httpd-vhosts.conf</code>. Se você está usando <code>httpd-vhosts.conf</code>, verifique se
+este arquivo está incluído no seu arquivo principal <code>httpd.conf</code>. Algumas distribuições Linux
+(ex: Ubuntu) empacotam o Apache de forma que os arquivos de configuração sejam armazenados em
+<code>/etc/apache2</code> e criam um arquivo para cada virtual host dentro da pasta
+<code>/etc/apache2/sites-enabled</code>. Neste caso, você colocaria o bloco de virtual
+host abaixo no arquivo <code>/etc/apache2/sites-enabled/tutorial-zf</code>.</p>
+<p>Certifique-se de que <code>NameVirtualHost</code> está definido como <code>*:80</code> ou algo parecido, e então
+defina um virtual host como esse:</p>
+<pre class="codehilite"><code class="language-apache">&lt;VirtualHost *:80&gt;
+    ServerName tutorial-zf.localhost
+    DocumentRoot /caminho/para/tutorial-zf/public
+    SetEnv APPLICATION_ENV &quot;development&quot;
+    &lt;Directory /caminho/para/tutorial-zf/public&gt;
+        DirectoryIndex index.php
+        AllowOverride All
+        Require all granted
+    &lt;/Directory&gt;
+&lt;/VirtualHost&gt;</code></pre>
+
+<p>Certifique-se de atualizar seu arquivo <code>/etc/hosts</code> ou
+<code>c:\windows\system32\drivers\etc\hosts</code> para que <code>tutorial-zf.localhost</code> seja
+mapeado para <code>127.0.0.1</code>. O site pode então ser acessado usando
+<code>http://tutorial-zf.localhost</code>.</p>
+<pre class="codehilite"><code class="language-none">127.0.0.1 tutorial-zf.localhost localhost</code></pre>
+
+<p>Reinicie o Apache.</p>
+<p>Se você fez isso de forma correta, você terá os mesmos resultados mostrados com
+<a href="#usando-o-servidor-web-interno-do-php">o servidor web interno do PHP</a>.</p>
+<p>Para testar que o seu arquivo <code>.htaccess</code> está funcionando, acesse
+<code>http://tutorial-zf.localhost/1234</code>, e você deve ver a página 404 como mencionado
+anteriormente. Se você ver um erro 404 padrão do Apache, então você precisa corrigir o
+seu <code>.htaccess</code> antes de continuar.</p>
+<p>Se você estiver usando o IIS com o módulo URL Rewrite, importe o seguinte:</p>
+<pre class="codehilite"><code class="language-apache">RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [NC,L]</code></pre>
+
+<p>Você agora possui uma aplicação esqueleto funcionando e podemos começar a adicionar os detalhes da nossa aplicação.</p>
+<h2 id="relatorio-de-erros">Relatório de erros</h2>
+<p>Opcionalmente, <em>ao usar o Apache</em>, você pode usar a configuração <code>APPLICATION_ENV</code> no
+seu <code>VirtualHost</code> para permitir que o PHP envie todos os seus erros para o navegador. Isso pode ser
+útil durante o desenvolvimento da sua aplicação.</p>
+<p>Edite o arquivo <code>tutorial-zf/public/index.php</code> e altere-o para o seguinte:</p>
+<pre class="codehilite"><code class="language-php">&lt;?php
+
+use Zend\Mvc\Application;
+
+/**
+ * Exibir todos os erros quando o valor de APPLICATION_ENV é development.
+ */
+if ($_SERVER['APPLICATION_ENV'] === 'development') {
+    error_reporting(E_ALL);
+    ini_set(&quot;display_errors&quot;, 1);
+}
+
+/**
+ * Isso torna nossa vida mais fácil ao lidar com caminhos. Tudo é relativo
+ * à raiz da aplicação agora.
+ */
+chdir(dirname(__DIR__));
+
+// Recusar requisições de arquivos estáticos ao servidor web interno do PHP
+if (php_sapi_name() === 'cli-server') {
+    $path = realpath(__DIR__ . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+    if (__FILE__ !== $path &amp;&amp; is_file($path)) {
+        return false;
+    }
+    unset($path);
+}
+
+// Autoloading do Composer
+include __DIR__ . '/../vendor/autoload.php';
+
+if (! class_exists(Application::class)) {
+    throw new RuntimeException(
+        &quot;Não é possível carregar a aplicação.\n&quot;
+        . &quot;- Digite `composer install` se você estiver desenvolvendo localmente.\n&quot;
+        . &quot;- Digite `vagrant ssh -c 'composer install'` se você estiver usando o Vagrant.\n&quot;
+        . &quot;- Digite `docker-compose run zf composer install` se você estiver usando o Docker.\n&quot;
+    );
+}
+
+// Carrega a configuração
+$appConfig = require __DIR__ . '/../config/application.config.php';
+if (file_exists(__DIR__ . '/../config/development.config.php')) {
+    $appConfig = ArrayUtils::merge($appConfig, require __DIR__ . '/../config/development.config.php');
+}
+
+// Executa a aplicação!
+Application::init($appConfig)-&gt;run();</code></pre>
+
+<h2 id="modo-de-desenvolvimento">Modo de desenvolvimento</h2>
+<p>Antes de começarmos, vamos habilitar o <em>modo de desenvolvimento</em> para a aplicação.
+A aplicação esqueleto fornece dois arquivos que nos permitem especificar configurações
+gerais de desenvolvimento que queremos usar em todos os lugares; estas podem incluir habilitar
+módulos para depuração, ou habilitar a exibição de erros em nossos view scripts. Estes
+arquivos estão localizados em:</p>
+<ul>
+<li><code>config/development.config.php.dist</code></li>
+<li><code>config/autoload/development.local.php.dist</code></li>
+</ul>
+<p>Quando habilitamos o modo de desenvolvimento, estes arquivos são copiados para:</p>
+<ul>
+<li><code>config/development.config.php</code></li>
+<li><code>config/autoload/development.local.php</code></li>
+</ul>
+<p>Isso permite que eles sejam incorporados na nossa aplicação. Quando desabilitamos o modo de
+desenvolvimento, estes dois arquivos que foram criados são então removidos, deixando apenas as
+versões <code>.dist</code>. (O repositório também contém regras para ignorar as cópias.)</p>
+<p>Agora vamos habilitar o modo de desenvolvimento:</p>
+<pre class="codehilite"><code class="language-bash">$ composer development-enable</code></pre>
+
+<blockquote>
+<h3 id="nunca-habilite-o-modo-de-desenvolvimento-em-producao">Nunca habilite o modo de desenvolvimento em produção</h3>
+<p>Você nunca deve habilitar o modo de desenvolvimento em produção, pois a razão
+típica para habilitá-lo é para habilitar a depuração! Conforme observado, os artefatos gerados
+ao habilitar o modo de desenvolvimento não podem ser enviados para o seu repositório, então
+desde que você não execute o comando em produção, você deve estar seguro.</p>
+<p>Você pode testar o status do modo de desenvolvimento usando:</p>
+<pre class="codehilite"><code class="language-bash">$ composer development-status</code></pre>
+
+<p>E você pode desabilitá-lo usando:</p>
+<pre class="codehilite"><code class="language-bash">$ composer development-disable</code></pre>
+
+</blockquote>
+
+<hr />
+
+
+<nav>
+  <ul class="pager hidden-print">
+    <li class="previous">
+      <a rel="prev" href="../overview/"><i class="fa fa-arrow-left"></i> Anterior</a>
+    </li>
+    <li class="next">
+      <a rel="next" href="../modules/">Próxima <i class="fa fa-arrow-right"></i></a>
+    </li>
+  </ul>
+</nav>
+</div>
+            
+        </div>
+    
+
+    <div id="footerwrap">
+    <div class="container">
+        <div class="row site-map">
+            <div class="col-lg-3">
+              <p>
+                <strong>Zend Framework</strong><br />
+                <a href="https://framework.zend.com/">framework.zend.com</a><br />
+                <a href="https://docs.zendframework.com">docs.zendframework.com</a><br />
+                <a href="https://packages.zendframework.com">packages.zendframework.com</a><br />
+                <a href="https://apigility.org">apigility.org</a><br />
+              </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 centered">
+                <a class="back-to-top" href="#page-top"><i class="fa fa-chevron-circle-up fa-4" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        <div class="spacing"></div>
+
+        <div class="row">
+            <div class="col-lg-8">
+                <h4>Copyright</h4>
+                <div class="hline-w"></div>
+
+                <p>&copy; 2006-2017 by <a href="https://www.zend.com/">Zend</a>, a <a href="https://www.roguewave.com/">Rogue Wave Company</a>.</p>
+            </div>
+
+            <div class="col-lg-4">
+                <h4>Contacts</h4>
+                <div class="hline-w"></div>
+                <p>
+                    <a href="https://discourse.zendframework.com" class="btn-social btn-outline" alt="Forum" title="Forum"><i class="fa fa-comments"></i></a>
+                    <a href="https://zendframework-slack.herokuapp.com" class="btn-social btn-outline" alt="Slack" title="Slack"><i class="fa fa-slack"></i></a>
+                    <a href="https://github.com/zendframework" class="btn-social btn-outline" alt="Github" title="Github"><i class="fa fa-github"></i></a>
+                    <a href="https://twitter.com/zfdevteam" class="btn-social btn-outline" alt="Twitter" title="Twitter"><i class="fa fa-twitter"></i></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8="
+        crossorigin="anonymous"></script>
+
+    <script>var base_url = '../..';</script>
+    <script src="../../js/scripts-60a9690001.js"></script>
+    <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../search/require.js"></script>
+        <script src="../../search/search.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Modal de Pesquisa" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Fechar</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Pesquisar</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        A partir daqui você pode pesquisar esses documentos. Digite seus termos de pesquisa abaixo.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Pesquisar..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="zf-components">
+  <div class="zf-components-grid">
+    <div class="zf-logo">
+      <a href="https://framework.zend.com" data-toggle="tooltip" data-placement="bottom" title="Ir para a página inicial do Zend Framework"><img src="../../img/zf-logo-mark.svg" alt="Zend Framework" width="250" /></a>
+    </div>
+
+    <div class="component-list"></div>
+
+    <p class="zf-components-rollup"><a href="#">Ocultar lista</a></p>
+  </div>
+</div>
+
+</body>
+
+</html>

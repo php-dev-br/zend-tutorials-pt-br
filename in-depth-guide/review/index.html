@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tutoriais do Zend Framework">  
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    <title>Revisando o Módulo Blog - Tutoriais do Zend Framework</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w="
+        crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../css/styles-288837cc22.css">
+
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108409296-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-108409296-1');
+    </script>
+    
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Alternar navegação</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <span class="navbar-brand">
+                <a class="logo-link" href="https://framework.zend.com/" data-toggle="tooltip" data-placement="bottom" title="Ir para a página inicial do Zend Framework"><img src="../../img/zf-logo-mark.svg" height="28" alt="Zend Framework" /></a>
+                <a href="../..">tutoriais</a>
+            </span>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutoriais sobre MVC <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Começando com o Zend Framework</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../getting-started/overview/">Visão Geral</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../getting-started/skeleton-application/">A Aplicação Esqueleto</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../getting-started/modules/">Módulos</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../getting-started/routing-and-controllers/">Roteamento e Controllers</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../getting-started/database-and-models/">Banco de Dados e Models</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../getting-started/forms-and-actions/">Formulários e Actions</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../getting-started/conclusion/">Conclusão</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../../unit-testing/">Realizando Testes Unitários em uma Aplicação zend-mvc</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../navigation/">Adicionando zend-navigation ao Módulo Album</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../pagination/">Adicionando zend-paginator ao Módulo Album</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Tutorial Aprofundado</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../first-module/">Apresentando o Módulo Blog</a>
+</li>
+
+        
+            
+<li >
+    <a href="../models-and-servicemanager/">Models e o ServiceManager</a>
+</li>
+
+        
+            
+<li >
+    <a href="../preparing-databases/">Preparando-se para Bancos de Dados Diferentes</a>
+</li>
+
+        
+            
+<li >
+    <a href="../zend-db-sql-zend-hydrator/">Abstração de SQL e Hidratação de Objetos</a>
+</li>
+
+        
+            
+<li >
+    <a href="../understanding-routing/">Entendendo o Router</a>
+</li>
+
+        
+            
+<li >
+    <a href="../zend-form-zend-form-fieldset/">Usando Forms e Fieldsets</a>
+</li>
+
+        
+            
+<li >
+    <a href="../data-binding/">Editando e Deletando Dados</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">Revisando o Módulo Blog</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../../advanced-config/">Configuração Avançada</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../i18n/">Internacionalização</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutoriais de Componentes <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../db-adapter/">Configurando um Adapter de Bancos de Dados</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../event-manager/">Usando o EventManager</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Migração <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Para a Versão 3</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../migration/to-v3/overview/">Visão Geral</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../migration/to-v3/components/">Componentes</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../migration/to-v3/application/">Aplicações</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" class="component-toggle" data-toggle="tooltip" data-placement="bottom" title="Exibir lista de componentes">
+                        <i class="fa fa-book"></i> Componentes
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Pesquisar
+                    </a>
+                </li>
+                
+                    <li>
+                        <a href="https://github.com/arcristo/zend-tutorials-pt-br/">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+    
+        <div id="page-top" class="container docs">
+            
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#reviewing-the-blog-module">Reviewing the Blog Module</a></li>
+        
+            <li><a href="#do-we-always-need-all-the-layers-and-interfaces">Do we always need all the layers and interfaces?</a></li>
+        
+            <li><a href="#why-are-there-so-many-controllers">Why are there so many controllers?</a></li>
+        
+            <li><a href="#do-you-have-more-questions-pr-them">Do you have more questions? PR them!</a></li>
+        
+    
+    </ul>
+
+    
+    <ul class="pager hidden-print">
+      <li class="previous">
+        <a rel="prev" href="../data-binding/"><i class="fa fa-arrow-left"></i> Anterior</a>
+      </li>
+      <li class="next">
+        <a rel="next" href="../../advanced-config/">Próxima <i class="fa fa-arrow-right"></i></a>
+      </li>
+    </ul>
+    
+</div></div>
+            <div class="col-md-9" role="main">
+
+<ol class="breadcrumb" role="navigation" aria-label="breadcrumbs navigation">
+  <li><a href="../..">tutoriais</a></li>
+  
+    
+      
+        <li>Tutoriais sobre MVC</li>
+      
+    
+      
+        <li>Tutorial Aprofundado</li>
+      
+    
+  
+  <li class="active">Revisando o Módulo Blog</li>
+</ol>
+
+<h1 id="reviewing-the-blog-module">Reviewing the Blog Module</h1>
+<p>Throughout the tutorial, we have created a fully functional CRUD module
+using a blog as an example. While doing so, we've made use of several different
+design patterns and best-practices. Now it's time to reiterate and take a look
+at some of the code samples we've written. This is going to be done in a Q&amp;A
+fashion.</p>
+<h2 id="do-we-always-need-all-the-layers-and-interfaces">Do we always need all the layers and interfaces?</h2>
+<p>Short answer: no.</p>
+<p>Long answer: The importance of interfaces increases the bigger your application
+becomes. If you can foresee that your application will be used by other people
+or should be extendable, then you should strongly consider creating interfaces
+and coding to them.  This is a very common best-practice that is not tied to
+Zend Framework specifically, but rather more general object oriented
+programming.</p>
+<p>The main role of the multiple layers that we have introduced are to provide a
+strict separation of concerns for our application.</p>
+<p>It is tempting to include your database access directly in your controllers. We
+recommend splitting it out to other objects, and providing interfaces for the
+interactions whenever you can. Doing so helps decouple your controllers from the
+implementation, allowing you to swap out the implementation later without
+changing the controllers. Using interfaces also simplifies testing, as you can
+provide mock implementations easily.</p>
+<h2 id="why-are-there-so-many-controllers">Why are there so many controllers?</h2>
+<p>With the exception of our <code>ListController</code>, we created a controller for each
+route we added.</p>
+<p>We could have combined these into a single controller. In practice, we have
+observed the following when doing so:</p>
+<ul>
+<li>Controllers grow in complexity, making maintenance and additions more
+  difficult.</li>
+<li>The number of dependencies grows with the number of responsibilities. Many
+  actions may need only a subset of the dependencies, leading to needless
+  performance and resource overhead.</li>
+<li>Testing becomes more difficult.</li>
+<li>Re-use becomes more difficult.</li>
+</ul>
+<p>The primary problem is that such controllers quickly break the
+<a href="https://en.wikipedia.org/wiki/Single_responsibility_principle">Single Responsibility Principle</a>,
+and inherit all the problems that principle attempts to combat.</p>
+<p>We recommend a single action per controller whenever possible.</p>
+<h2 id="do-you-have-more-questions-pr-them">Do you have more questions? PR them!</h2>
+<p>If there's anything you feel that's missing in this FAQ, please create an issue
+or send a pull request with your question!</p>
+
+<hr />
+
+
+<nav>
+  <ul class="pager hidden-print">
+    <li class="previous">
+      <a rel="prev" href="../data-binding/"><i class="fa fa-arrow-left"></i> Anterior</a>
+    </li>
+    <li class="next">
+      <a rel="next" href="../../advanced-config/">Próxima <i class="fa fa-arrow-right"></i></a>
+    </li>
+  </ul>
+</nav>
+</div>
+            
+        </div>
+    
+
+    <div id="footerwrap">
+    <div class="container">
+        <div class="row site-map">
+            <div class="col-lg-3">
+              <p>
+                <strong>Zend Framework</strong><br />
+                <a href="https://framework.zend.com/">framework.zend.com</a><br />
+                <a href="https://docs.zendframework.com">docs.zendframework.com</a><br />
+                <a href="https://packages.zendframework.com">packages.zendframework.com</a><br />
+                <a href="https://apigility.org">apigility.org</a><br />
+              </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 centered">
+                <a class="back-to-top" href="#page-top"><i class="fa fa-chevron-circle-up fa-4" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        <div class="spacing"></div>
+
+        <div class="row">
+            <div class="col-lg-8">
+                <h4>Copyright</h4>
+                <div class="hline-w"></div>
+
+                <p>&copy; 2006-2017 by <a href="https://www.zend.com/">Zend</a>, a <a href="https://www.roguewave.com/">Rogue Wave Company</a>.</p>
+            </div>
+
+            <div class="col-lg-4">
+                <h4>Contacts</h4>
+                <div class="hline-w"></div>
+                <p>
+                    <a href="https://discourse.zendframework.com" class="btn-social btn-outline" alt="Forum" title="Forum"><i class="fa fa-comments"></i></a>
+                    <a href="https://zendframework-slack.herokuapp.com" class="btn-social btn-outline" alt="Slack" title="Slack"><i class="fa fa-slack"></i></a>
+                    <a href="https://github.com/zendframework" class="btn-social btn-outline" alt="Github" title="Github"><i class="fa fa-github"></i></a>
+                    <a href="https://twitter.com/zfdevteam" class="btn-social btn-outline" alt="Twitter" title="Twitter"><i class="fa fa-twitter"></i></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8="
+        crossorigin="anonymous"></script>
+
+    <script>var base_url = '../..';</script>
+    <script src="../../js/scripts-60a9690001.js"></script>
+    <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../search/require.js"></script>
+        <script src="../../search/search.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Modal de Pesquisa" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Fechar</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Pesquisar</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        A partir daqui você pode pesquisar esses documentos. Digite seus termos de pesquisa abaixo.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Pesquisar..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="zf-components">
+  <div class="zf-components-grid">
+    <div class="zf-logo">
+      <a href="https://framework.zend.com" data-toggle="tooltip" data-placement="bottom" title="Ir para a página inicial do Zend Framework"><img src="../../img/zf-logo-mark.svg" alt="Zend Framework" width="250" /></a>
+    </div>
+
+    <div class="component-list"></div>
+
+    <p class="zf-components-rollup"><a href="#">Ocultar lista</a></p>
+  </div>
+</div>
+
+</body>
+
+</html>

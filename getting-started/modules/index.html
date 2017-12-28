@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tutoriais do Zend Framework">  
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    <title>Módulos - Tutoriais do Zend Framework</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w="
+        crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../css/styles-288837cc22.css">
+
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108409296-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-108409296-1');
+    </script>
+    
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Alternar navegação</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <span class="navbar-brand">
+                <a class="logo-link" href="https://framework.zend.com/" data-toggle="tooltip" data-placement="bottom" title="Ir para a página inicial do Zend Framework"><img src="../../img/zf-logo-mark.svg" height="28" alt="Zend Framework" /></a>
+                <a href="../..">tutoriais</a>
+            </span>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutoriais sobre MVC <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Começando com o Zend Framework</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../overview/">Visão Geral</a>
+</li>
+
+        
+            
+<li >
+    <a href="../skeleton-application/">A Aplicação Esqueleto</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">Módulos</a>
+</li>
+
+        
+            
+<li >
+    <a href="../routing-and-controllers/">Roteamento e Controllers</a>
+</li>
+
+        
+            
+<li >
+    <a href="../database-and-models/">Banco de Dados e Models</a>
+</li>
+
+        
+            
+<li >
+    <a href="../forms-and-actions/">Formulários e Actions</a>
+</li>
+
+        
+            
+<li >
+    <a href="../conclusion/">Conclusão</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../../unit-testing/">Realizando Testes Unitários em uma Aplicação zend-mvc</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../navigation/">Adicionando zend-navigation ao Módulo Album</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../pagination/">Adicionando zend-paginator ao Módulo Album</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Tutorial Aprofundado</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../in-depth-guide/first-module/">Apresentando o Módulo Blog</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../in-depth-guide/models-and-servicemanager/">Models e o ServiceManager</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../in-depth-guide/preparing-databases/">Preparando-se para Bancos de Dados Diferentes</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../in-depth-guide/zend-db-sql-zend-hydrator/">Abstração de SQL e Hidratação de Objetos</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../in-depth-guide/understanding-routing/">Entendendo o Router</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../in-depth-guide/zend-form-zend-form-fieldset/">Usando Forms e Fieldsets</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../in-depth-guide/data-binding/">Editando e Deletando Dados</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../in-depth-guide/review/">Revisando o Módulo Blog</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../../advanced-config/">Configuração Avançada</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../i18n/">Internacionalização</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutoriais de Componentes <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../db-adapter/">Configurando um Adapter de Bancos de Dados</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../event-manager/">Usando o EventManager</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Migração <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Para a Versão 3</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../migration/to-v3/overview/">Visão Geral</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../migration/to-v3/components/">Componentes</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../migration/to-v3/application/">Aplicações</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" class="component-toggle" data-toggle="tooltip" data-placement="bottom" title="Exibir lista de componentes">
+                        <i class="fa fa-book"></i> Componentes
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Pesquisar
+                    </a>
+                </li>
+                
+                    <li>
+                        <a href="https://github.com/arcristo/zend-tutorials-pt-br/">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+    
+        <div id="page-top" class="container docs">
+            
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#modulos">Módulos</a></li>
+        
+            <li><a href="#configurando-o-modulo-album">Configurando o módulo Album</a></li>
+        
+            <li><a href="#configuracao">Configuração</a></li>
+        
+            <li><a href="#informando-a-aplicacao-sobre-nosso-novo-modulo">Informando a aplicação sobre nosso novo módulo</a></li>
+        
+    
+    </ul>
+
+    
+    <ul class="pager hidden-print">
+      <li class="previous">
+        <a rel="prev" href="../skeleton-application/"><i class="fa fa-arrow-left"></i> Anterior</a>
+      </li>
+      <li class="next">
+        <a rel="next" href="../routing-and-controllers/">Próxima <i class="fa fa-arrow-right"></i></a>
+      </li>
+    </ul>
+    
+</div></div>
+            <div class="col-md-9" role="main">
+
+<ol class="breadcrumb" role="navigation" aria-label="breadcrumbs navigation">
+  <li><a href="../..">tutoriais</a></li>
+  
+    
+      
+        <li>Tutoriais sobre MVC</li>
+      
+    
+      
+        <li>Começando com o Zend Framework</li>
+      
+    
+  
+  <li class="active">Módulos</li>
+</ol>
+
+<h1 id="modulos">Módulos</h1>
+<p>O zend-mvc usa um sistema de módulos para organizar seu código específico da aplicação
+principal dentro de cada módulo. O módulo <code>Application</code> fornecido pelo esqueleto é usado
+para fornecer configuração de bootstrapping, erro e roteamento para toda a
+aplicação. Ele geralmente é usado para fornecer controllers a nível de aplicação para
+a página inicial de uma aplicação, mas não vamos usar o padrão
+fornecido neste tutorial, pois queremos que nossa lista de álbuns seja a página inicial,
+que ficará em nosso próprio módulo.</p>
+<p>Vamos colocar todo o nosso código no módulo <code>Album</code>, que irá conter nossos
+controllers, models, forms e views, juntamente com a configuração. Também ajustaremos
+o módulo <code>Application</code> conforme necessário.</p>
+<p>Vamos começar com os diretórios necessários.</p>
+<h2 id="configurando-o-modulo-album">Configurando o módulo Album</h2>
+<p>Comece criando um diretório chamado <code>Album</code> em <code>module</code> com os seguintes
+subdiretórios para manter os arquivos do módulo:</p>
+<pre class="codehilite"><code class="language-text">tutorial-zf/
+    /module
+        /Album
+            /config
+            /src
+                /Controller
+                /Form
+                /Model
+            /view
+                /album
+                    /album</code></pre>
+
+<p>O módulo <code>Album</code> possui diretórios separados para os diferentes tipos de arquivos que
+teremos. Os arquivos PHP que contêm classes dentro do namespace <code>Album</code> ficam
+no diretório <code>src/</code>. O diretório <code>view</code> também tem uma sub-pasta chamada <code>album</code>
+para os view scripts do nosso módulo.</p>
+<p>Para carregar e configurar um módulo, o Zend Framework fornece um
+<code>ModuleManager</code>. Este irá procurar por uma classe <code>Module</code> no namespace do módulo
+especificado (ou seja, <code>Album</code>); no caso do nosso novo módulo, isso significa a classe
+<code>Album\Module</code>, que será encontrada em <code>module/Album/src/Module.php</code>.</p>
+<p>Vamos criar esse arquivo agora, com o seguinte conteúdo:</p>
+<pre class="codehilite"><code class="language-php">namespace Album;
+
+use Zend\ModuleManager\Feature\ConfigProviderInterface;
+
+class Module implements ConfigProviderInterface
+{
+    public function getConfig()
+    {
+        return include __DIR__ . '/../config/module.config.php';
+    }
+}</code></pre>
+
+<p>O <code>ModuleManager</code> chamará <code>getConfig()</code> automaticamente para nós.</p>
+<h3 id="autoloading">Autoloading</h3>
+<p>Embora o Zend Framework forneça recursos de autoloading através do seu
+componente <a href="https://zendframework.github.io/zend-loader">zend-loader</a>,
+recomendamos o uso dos recursos de autoloading do Composer. Assim sendo, precisamos informar
+ao Composer nosso novo namespace, e onde seus arquivos ficam.</p>
+<p>Abra o <code>composer.json</code> na raiz do seu projeto, e procure a seção <code>autoload</code>;
+ela deve parecer o seguinte por padrão:</p>
+<pre class="codehilite"><code class="language-json">&quot;autoload&quot;: {
+    &quot;psr-4&quot;: {
+        &quot;Application\\&quot;: &quot;module/Application/src/&quot;
+    }
+},</code></pre>
+
+<p>Agora vamos adicionar o nosso novo módulo à lista, então agora a seção é lida assim:</p>
+<pre class="codehilite"><code class="language-json">&quot;autoload&quot;: {
+    &quot;psr-4&quot;: {
+        &quot;Application\\&quot;: &quot;module/Application/src/&quot;,
+        &quot;Album\\&quot;: &quot;module/Album/src/&quot;
+    }
+},</code></pre>
+
+<p>Depois de fazer essa alteração, execute o seguinte comando para garantir que o Composer atualize suas
+regras de autoloading:</p>
+<pre class="codehilite"><code class="language-bash">$ composer dump-autoload</code></pre>
+
+<h2 id="configuracao">Configuração</h2>
+<p>Tendo registrado o autoloader, vamos dar uma olhada no método <code>getConfig()</code>
+em <code>Album\Module</code>. Este método carrega o arquivo <code>config/module.config.php</code>
+no diretório raiz do módulo.</p>
+<p>Crie um arquivo chamado <code>module.config.php</code> em
+<code>tutorial-zf/module/Album/config/</code>:</p>
+<pre class="codehilite"><code class="language-php">namespace Album;
+
+use Zend\ServiceManager\Factory\InvokableFactory;
+
+return [
+    'controllers' =&gt; [
+        'factories' =&gt; [
+            Controller\AlbumController::class =&gt; InvokableFactory::class,
+        ],
+    ],
+    'view_manager' =&gt; [
+        'template_path_stack' =&gt; [
+            'album' =&gt; __DIR__ . '/../view',
+        ],
+    ],
+];</code></pre>
+
+<p>A informação de configuração é passada para os componentes relevantes pelo
+<code>ServiceManager</code>. Precisamos de duas seções iniciais: <code>controllers</code> e
+<code>view_manager</code>. A seção <code>controllers</code> fornece uma lista de todos os controllers
+fornecidos pelo módulo. Nós precisaremos de um controller, <code>AlbumController</code>; iremos
+referenciá-lo pelo seu nome de classe totalmente qualificado, e usaremos a <code>InvokableFactory</code>
+do zend-servicemanager para criar instâncias dele.</p>
+<p>Na seção <code>view_manager</code>, adicionamos nosso diretório de view à
+configuração <code>TemplatePathStack</code>. Isso permitirá que ele encontre os view scripts
+do módulo <code>Album</code> que estão armazenados em nosso diretório <code>view/</code>.</p>
+<h2 id="informando-a-aplicacao-sobre-nosso-novo-modulo">Informando a aplicação sobre nosso novo módulo</h2>
+<p>Agora precisamos dizer ao <code>ModuleManager</code> que este novo módulo existe. Isso é
+feito no arquivo <code>config/modules.config.php</code> da aplicação, que é fornecido
+pela aplicação esqueleto. Atualize este arquivo para que o array que ele retorna
+também contenha o módulo <code>Album</code>, então o arquivo agora parece com isso:</p>
+<p>(As alterações necessárias estão destacadas usando comentários; os comentários originais do
+arquivo foram omitidos por brevidade.)</p>
+<pre class="codehilite"><code class="language-php">return [
+    'Zend\Form',
+    'Zend\Db',
+    'Zend\Router',
+    'Zend\Validator',
+    'Application',
+    'Album',          // &lt;-- Adicione esta linha
+];</code></pre>
+
+<p>Como você pode ver, adicionamos nosso módulo <code>Album</code> na lista de módulos após
+o módulo <code>Application</code>.</p>
+<p>Agora deixamos o módulo configurado, pronto para colocar nosso código personalizado nele.</p>
+
+<hr />
+
+
+<nav>
+  <ul class="pager hidden-print">
+    <li class="previous">
+      <a rel="prev" href="../skeleton-application/"><i class="fa fa-arrow-left"></i> Anterior</a>
+    </li>
+    <li class="next">
+      <a rel="next" href="../routing-and-controllers/">Próxima <i class="fa fa-arrow-right"></i></a>
+    </li>
+  </ul>
+</nav>
+</div>
+            
+        </div>
+    
+
+    <div id="footerwrap">
+    <div class="container">
+        <div class="row site-map">
+            <div class="col-lg-3">
+              <p>
+                <strong>Zend Framework</strong><br />
+                <a href="https://framework.zend.com/">framework.zend.com</a><br />
+                <a href="https://docs.zendframework.com">docs.zendframework.com</a><br />
+                <a href="https://packages.zendframework.com">packages.zendframework.com</a><br />
+                <a href="https://apigility.org">apigility.org</a><br />
+              </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 centered">
+                <a class="back-to-top" href="#page-top"><i class="fa fa-chevron-circle-up fa-4" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        <div class="spacing"></div>
+
+        <div class="row">
+            <div class="col-lg-8">
+                <h4>Copyright</h4>
+                <div class="hline-w"></div>
+
+                <p>&copy; 2006-2017 by <a href="https://www.zend.com/">Zend</a>, a <a href="https://www.roguewave.com/">Rogue Wave Company</a>.</p>
+            </div>
+
+            <div class="col-lg-4">
+                <h4>Contacts</h4>
+                <div class="hline-w"></div>
+                <p>
+                    <a href="https://discourse.zendframework.com" class="btn-social btn-outline" alt="Forum" title="Forum"><i class="fa fa-comments"></i></a>
+                    <a href="https://zendframework-slack.herokuapp.com" class="btn-social btn-outline" alt="Slack" title="Slack"><i class="fa fa-slack"></i></a>
+                    <a href="https://github.com/zendframework" class="btn-social btn-outline" alt="Github" title="Github"><i class="fa fa-github"></i></a>
+                    <a href="https://twitter.com/zfdevteam" class="btn-social btn-outline" alt="Twitter" title="Twitter"><i class="fa fa-twitter"></i></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8="
+        crossorigin="anonymous"></script>
+
+    <script>var base_url = '../..';</script>
+    <script src="../../js/scripts-60a9690001.js"></script>
+    <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../search/require.js"></script>
+        <script src="../../search/search.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Modal de Pesquisa" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Fechar</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Pesquisar</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        A partir daqui você pode pesquisar esses documentos. Digite seus termos de pesquisa abaixo.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Pesquisar..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="zf-components">
+  <div class="zf-components-grid">
+    <div class="zf-logo">
+      <a href="https://framework.zend.com" data-toggle="tooltip" data-placement="bottom" title="Ir para a página inicial do Zend Framework"><img src="../../img/zf-logo-mark.svg" alt="Zend Framework" width="250" /></a>
+    </div>
+
+    <div class="component-list"></div>
+
+    <p class="zf-components-rollup"><a href="#">Ocultar lista</a></p>
+  </div>
+</div>
+
+</body>
+
+</html>
